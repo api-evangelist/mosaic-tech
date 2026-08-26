@@ -1,0 +1,71 @@
+generated: '2026-08-26'
+method: searched
+source: https://trust.mosaic.tech/
+note: >-
+  Mosaic Tech publishes no machine-readable API contract (no OpenAPI, AsyncAPI, GraphQL SDL, WSDL or
+  .proto was found on any host it controls), so every contract-level conformance assertion below is
+  false for want of a contract to assert it against — not because the API was found to violate the
+  standard. The compliance assertions come from the live Mosaic Trust Center.
+standards:
+- id: soc2-type-ii
+  name: SOC 2 Type II
+  conforms: true
+  evidence: >-
+    trust.mosaic.tech carries a SOC 2 Type II badge, a featured "Mosaic Finance SOC2 Type II Report
+    2025" document, and a 2023-03-21 announcement of a clean audit opinion issued by Sensiba San
+    Filippo, LLP. Report itself is access-gated and was not retrieved.
+  source: https://trust.mosaic.tech/
+- id: gdpr
+  name: GDPR (data processing terms)
+  conforms: true
+  evidence: >-
+    Trust Center summary states "Will enter into a DPA" and features a "Mosaic Data Processing
+    Addendum (DPA)" document. This evidences published processing terms; it is not an audit or a
+    certification, and no supervisory-authority finding is claimed.
+  source: https://trust.mosaic.tech/
+- id: iso-27001
+  name: ISO/IEC 27001
+  conforms: false
+  evidence: >-
+    ISO 27001 appears only inside the Trust Center's 167-answer security questionnaire knowledge
+    base, never as a held badge or certificate. No ISO 27001 certification is claimed.
+- id: pci-dss
+  name: PCI DSS
+  conforms: false
+  evidence: >-
+    Referenced only inside knowledge-base answers. Mosaic is an FP&A analytics platform, not a card
+    acquirer; no PCI attestation is published.
+- id: hipaa
+  name: HIPAA
+  conforms: false
+  evidence: Referenced only inside knowledge-base answers; no HIPAA attestation or BAA offer is published.
+- id: oauth2
+  name: OAuth 2.0 (RFC 6749)
+  conforms: false
+  evidence: >-
+    No published authorization server. /.well-known/oauth-authorization-server 301s on
+    www.mosaic.tech and 503s on api.mosaic.tech.
+- id: oidc
+  name: OpenID Connect Discovery
+  conforms: false
+  evidence: /.well-known/openid-configuration not served on any Mosaic host (301 / 503 / SPA catch-all).
+- id: rfc9457
+  name: RFC 9457 Problem Details for HTTP APIs
+  conforms: false
+  evidence: No published contract or error reference to assert this against.
+- id: rfc8594
+  name: RFC 8594 Sunset header
+  conforms: false
+  evidence: No published deprecation policy or API to carry the header.
+- id: rfc9116
+  name: RFC 9116 security.txt
+  conforms: false
+  evidence: /.well-known/security.txt not served on any Mosaic host — see well-known/mosaic-tech-well-known.yml.
+domain_standards:
+  note: >-
+    Reward-only check. The corporate FP&A / strategic-finance category has no widely adopted
+    machine-readable interchange standard that Mosaic could have declared (XBRL and OFX cover
+    statutory reporting and consumer banking respectively, neither of which is this product's
+    surface). Nothing was found and nothing is invented; the provider is not penalised for the
+    absence.
+  declared: []

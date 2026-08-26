@@ -1,0 +1,14 @@
+generated: '2026-08-26'
+method: searched
+source: https://www.mosaic.tech/plans
+note: >-
+  No Mosaic-branded pricing page is served. https://www.mosaic.tech/plans returns HTTP 301 to
+  https://www.hibob.com/pricing-plans/ and https://www.mosaic.tech/pricing 301s to
+  https://www.hibob.com/platform/finance/ — both are HiBob's commercial pages, not Mosaic's, and are
+  deliberately not recorded as Mosaic plans. The historical Mosaic /plans page is gone with the
+  brand. No Pricing pointer is emitted on this profile.
+plan_count: 0
+plans: []
+evidence:
+- {url: 'https://www.mosaic.tech/plans', status: 301, redirects_to: 'https://www.hibob.com/pricing-plans/'}
+- {url: 'https://www.mosaic.tech/pricing', status: 301, redirects_to: 'https://www.hibob.com/platform/finance/'}

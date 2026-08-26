@@ -1,0 +1,77 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  https://www.hibob.com/news/hibob-acquires-financial-planning-and-analysis-platform-mosaic-expanding-capabilities-to-empower-people-first-cfos/
+note: >-
+  Mosaic Tech has no published API versioning policy, deprecation policy, SLA document or status
+  page, because it never ran a public developer program. What this artifact records instead is the
+  lifecycle of the COMPANY and of the hosts it controlled — which is the only lifecycle signal a
+  consumer can act on here.
+versioning:
+  scheme: null
+  policy_url: null
+  note: No API, therefore no versioning scheme.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: No published deprecation policy. No Deprecation pointer is emitted.
+status_page:
+  url: null
+  claimed: true
+  served: false
+  note: >-
+    The Trust Center summary asserts "Has a status page", but status.mosaic.tech does not resolve
+    (DNS failure, curl exit 6) as of 2026-08-26 and no status URL is published anywhere reachable.
+    Claim recorded, presence NOT credited; no StatusPage pointer is emitted.
+sla:
+  published: false
+  claim: >-
+    "99.9% uptime" is asserted in the Trust Center philosophy section; no SLA document is publicly
+    served.
+company_lifecycle:
+  status: absorbed
+  events:
+  - date: '2019'
+    event: Mosaic founded (San Francisco) as a Strategic Finance Platform for FP&A teams.
+  - date: '2025-02-13'
+    event: >-
+      HiBob announces acquisition of Mosaic (signed 2025-02-12), stating the Mosaic brand will remain
+      as "Mosaic, a HiBob company" until further notice and that existing customers continue to be
+      supported.
+    source: https://www.hibob.com/blog/hibob-acquires-mosaic/
+  - date: '2025-04-01'
+    event: Acquisition closes.
+  - date: '2026-08-26'
+    event: >-
+      Probed. The Mosaic brand is fully absorbed. mosaic.tech and www.mosaic.tech 301-redirect every
+      path to hibob.com (root lands on https://www.hibob.com/platform/finance/); app.mosaic.tech 301s
+      to https://finance-app.hibob.com/; api.mosaic.tech returns HTTP 503 on every path probed;
+      docs., developer., developers., status., help. and support.mosaic.tech do not resolve. Only
+      trust.mosaic.tech still serves Mosaic-branded content.
+host_disposition:
+- host: www.mosaic.tech
+  status: 301
+  redirects_to: https://www.hibob.com/platform/finance/
+- host: app.mosaic.tech
+  status: 301
+  redirects_to: https://finance-app.hibob.com/
+- host: api.mosaic.tech
+  status: 503
+  note: Origin unavailable on every path probed; the API host is retired but the DNS record survives.
+- host: trust.mosaic.tech
+  status: 200
+  note: Live, Mosaic-branded, Conveyor-hosted Trust Center.
+- host: docs.mosaic.tech
+  status: null
+  note: Does not resolve.
+- host: status.mosaic.tech
+  status: null
+  note: Does not resolve.
+successor:
+  company: HiBob
+  product: HiBob Finance / FP&A suite
+  url: https://www.hibob.com/platform/finance/
+  api: >-
+    HiBob operates its own public developer surface (apidocs.hibob.com, api.hibob.com) and an MCP
+    beta. That surface belongs to HiBob and is profiled on the HiBob provider record — it is
+    deliberately NOT attributed to Mosaic Tech here.

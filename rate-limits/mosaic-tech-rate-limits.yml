@@ -1,0 +1,15 @@
+generated: '2026-08-26'
+method: searched
+source: https://api.mosaic.tech/
+note: >-
+  Honest zero. Mosaic Tech has no public API surface to rate-limit — api.mosaic.tech returns HTTP 503
+  on every path probed and no developer documentation was ever published under the mosaic.tech
+  domain (493 archived mosaic.tech URLs in the Internet Archive contain no /api, /docs, /developers,
+  swagger or openapi path). There are no published limits, no rate-limit response headers to record,
+  and no RateLimits pointer is emitted.
+limit_count: 0
+limits: []
+response_headers: []
+evidence:
+- {url: 'https://api.mosaic.tech/', status: 503}
+- {url: 'https://api.mosaic.tech/openapi.json', status: 503}

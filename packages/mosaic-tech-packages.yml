@@ -1,0 +1,17 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  registry.npmjs.org search ("mosaic-tech", "mosaic.tech", "mosaicfinance", "mosaic fp&a"),
+  pypi.org/pypi/{mosaic-tech,mosaictech}/json, api.github.com/orgs/{mosaic-tech,mosaicfinance}
+note: >-
+  Recorded absence. No first-party Mosaic Tech client library exists on any public registry. npm
+  matches for "mosaic" all belong to unrelated projects (react-mosaic-component, @uwdata/mosaic-*
+  from the UW Interactive Data Lab, @axinom/mosaic-*); PyPI returns 404 for both candidate names;
+  no GitHub organisation exists under mosaic-tech or mosaicfinance (both 404). Mosaic never shipped
+  an SDK because it never shipped a public API. No Packages or SDKs pointer is emitted.
+package_count: 0
+packages: []
+registries_checked:
+- {registry: npm, result: no-first-party-match}
+- {registry: pypi, result: 404}
+- {registry: github-org, result: 404}

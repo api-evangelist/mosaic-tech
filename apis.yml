@@ -1,17 +1,31 @@
 aid: mosaic-tech
 name: Mosaic Tech
-description: 'Mosaic Tech is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Mosaic Tech (Mosaic) was a San Francisco-based Strategic Finance Platform, founded in 2019, that
+  connected ERP, CRM, HRIS, billing and data-warehouse systems into a single financial data model for
+  FP&A teams — real-time analytics, agile financial planning, cash-flow forecasting, headcount planning
+  and multi-entity consolidation. HiBob announced its acquisition of Mosaic on 2025-02-13 and closed it
+  on 2025-04-01, folding the product into HiBob's finance/FP&A suite. As of 2026-08-26 the mosaic.tech
+  domain 301-redirects every path to hibob.com, app.mosaic.tech redirects to finance-app.hibob.com, and
+  api.mosaic.tech answers 503 on every path. Mosaic never published a public developer portal, API
+  reference, or machine-readable specification under its own brand — 493 archived mosaic.tech URLs in
+  the Internet Archive contain no /api, /docs, /developers, swagger or openapi path. HiBob's own
+  developer surface is profiled separately.
 url: https://raw.githubusercontent.com/api-evangelist/mosaic-tech/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-harvest-source-url: https://forgeglobal.com/mosaic-tech_stock/
 specificationVersion: '0.20'
 created: '2026-08-26'
 modified: '2026-08-26'
 tags:
-- Company
+- Financial Planning
+- FP&A
+- Strategic Finance
+- Business Intelligence
+- Analytics
+- SaaS
+- Acquired
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +33,52 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: TrustCenter
+  url: security/mosaic-tech-trust-center.yml
+- type: DomainSecurity
+  url: security/mosaic-tech-domain-security.yml
 - type: Website
+  url: https://www.mosaic.tech/
+- type: ParentCompany
+  name: HiBob
+  url: https://www.hibob.com/platform/finance/
+- type: SecondaryMarket
   url: https://forgeglobal.com/mosaic-tech_stock/
+- type: PrivacyPolicy
+  url: https://www.mosaic.tech/privacy-policy
+- type: LinkedIn
+  url: https://www.linkedin.com/company/mosaictech
+- type: Compliance
+  url: security/mosaic-tech-trust-center.yml
+- type: Conformance
+  url: conformance/mosaic-tech-conformance.yml
+- type: Lifecycle
+  url: lifecycle/mosaic-tech-lifecycle.yml
+- type: LLMsTxt
+  url: llms/mosaic-tech-llms.txt
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 9
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: defunct
+  detail: >-
+    Mosaic Tech was acquired by HiBob (announced 2025-02-13, closed 2025-04-01) and the brand is now
+    fully absorbed: every mosaic.tech path 301-redirects to hibob.com, app.mosaic.tech redirects to
+    finance-app.hibob.com, api.mosaic.tech answers 503 on every path, and the Internet Archive's 493
+    recorded mosaic.tech URLs contain no /api, /docs, /developers, swagger or openapi path — Mosaic
+    never ran a public developer program and the callable surface for this product today is HiBob's.
+  evidence:
+  - url: https://www.mosaic.tech/
+    status: 301
+  - url: https://api.mosaic.tech/openapi.json
+    status: 503
+  - url: https://app.mosaic.tech/
+    status: 301
+  - url: https://www.mosaic.tech/developers
+    status: 301
+  - url: https://trust.mosaic.tech/
+    status: 200
+  checked: '2026-08-26'

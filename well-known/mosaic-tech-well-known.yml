@@ -1,0 +1,103 @@
+generated: '2026-08-26'
+method: probed
+source: live HTTPS probes of every Mosaic-controlled host, 2026-08-26
+note: >-
+  Recorded absence. No /.well-known/ document is served on any mosaic.tech host. www.mosaic.tech
+  301-redirects EVERY path (including /.well-known/*) to hibob.com following the 2025 HiBob
+  acquisition; api.mosaic.tech answers 503 on every path; trust.mosaic.tech is a Conveyor-hosted
+  single-page app whose catch-all returns an identical 272,221-byte HTML shell for every path,
+  including a randomised control path that cannot exist. No WellKnown or SecurityTxt pointer is
+  emitted, because nothing was actually served.
+hit_count: 0
+hosts:
+- host: https://www.mosaic.tech
+  documents:
+  - path: /.well-known/security.txt
+    status: 301
+  - path: /.well-known/openid-configuration
+    status: 301
+  - path: /.well-known/oauth-authorization-server
+    status: 301
+  - path: /.well-known/api-catalog
+    status: 301
+  - path: /.well-known/ai-plugin.json
+    status: 301
+  - path: /.well-known/agent-card.json
+    status: 301
+  - path: /.well-known/agent.json
+    status: 301
+  soft_404_control:
+    path: /.well-known/aeprobe-1756200000
+    status: 301
+    bytes: 167
+    verdict: blanket-redirect
+- host: https://api.mosaic.tech
+  documents:
+  - path: /.well-known/security.txt
+    status: 503
+  - path: /.well-known/openid-configuration
+    status: 503
+  - path: /.well-known/oauth-authorization-server
+    status: 503
+  - path: /.well-known/api-catalog
+    status: 503
+  - path: /.well-known/ai-plugin.json
+    status: 503
+  - path: /.well-known/agent-card.json
+    status: 503
+  - path: /.well-known/agent.json
+    status: 503
+  soft_404_control:
+    path: /openapi.json
+    status: 503
+    bytes: 564
+    verdict: origin-unavailable
+- host: https://trust.mosaic.tech
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    verdict: spa-catch-all-not-a-document
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    verdict: spa-catch-all-not-a-document
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    verdict: spa-catch-all-not-a-document
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    verdict: spa-catch-all-not-a-document
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    verdict: spa-catch-all-not-a-document
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    verdict: spa-catch-all-not-a-document
+  - path: /.well-known/agent.json
+    status: 200
+    file: null
+    verdict: spa-catch-all-not-a-document
+  soft_404_control:
+    path: /.well-known/aeprobe-1756200000
+    status: 200
+    bytes: 272221
+    verdict: spa-catch-all
+- host: https://finance-app.hibob.com
+  note: >-
+    app.mosaic.tech 301s here. The host is HiBob's, not Mosaic's, and is an Angular SPA catch-all
+    returning an identical 32,201-byte shell for every path probed. Recorded for completeness only;
+    no credit is taken for it on this profile.
+  documents:
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    verdict: spa-catch-all-not-a-document
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    verdict: spa-catch-all-not-a-document
