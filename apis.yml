@@ -66,6 +66,10 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Plans
+  url: plans/mosaic-tech-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/mosaic-tech-rate-limits.yml
 - type: TrustCenter
   url: security/mosaic-tech-trust-center.yml
 - type: DomainSecurity
